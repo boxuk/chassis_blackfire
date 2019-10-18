@@ -36,6 +36,7 @@ class chassis_blackfire (
 	if ! defined( Package['blackfire-agent'] ) {
 		package { 'blackfire-agent':
 			ensure => latest,
+			require => Apt::Source['blackfire'],
 		}
 	}
 
