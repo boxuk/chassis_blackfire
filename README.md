@@ -1,4 +1,5 @@
 # Blackfire
+[![Build Status](https://travis-ci.com/boxuk/chassis_blackfire.svg?token=3rRfYiN6sMupp1z6RpzN&branch=master)](https://travis-ci.com/boxuk/chassis_blackfire)
 
 A Chassis extension to install and configure [Blackfire](https://blackfire.io) on your Chassis server.
 
