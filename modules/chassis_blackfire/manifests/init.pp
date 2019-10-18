@@ -36,7 +36,7 @@ class chassis_blackfire (
 	if ! defined( Package['blackfire-agent'] ) {
 		package { 'blackfire-agent':
 			ensure => latest,
-			require => Apt::Source['blackfire'],
+			require => Apt::Source['blackfire']
 		}
 	}
 
@@ -47,10 +47,12 @@ class chassis_blackfire (
 		group   => 'root',
 		mode    => '0644',
 		notify  => Service["php${php_version}-fpm"],
+		require => Package['blackfire-agent']
 	}
 
 	service { 'blackfire-agent':
 		ensure => $service,
+		require => Apt::Source['blackfire']
 	}
 
 	# PHP
@@ -65,6 +67,7 @@ class chassis_blackfire (
 		group   => 'root',
 		mode    => '0644',
 		notify  => Service["php${php_version}-fpm"],
+		require => Package['blackfire-php']
 	}
 
 	file { "/etc/php/${php_version}/cli/conf.d/blackfire.ini":
@@ -72,6 +75,7 @@ class chassis_blackfire (
 		content => template('chassis_blackfire/blackfire.ini.erb'),
 		owner   => 'root',
 		group   => 'root',
-		mode    => '0644'
+		mode    => '0644',
+		require => Package['blackfire-php']
 	}
 }
