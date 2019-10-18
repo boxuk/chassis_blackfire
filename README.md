@@ -3,8 +3,8 @@
 A Chassis extension to install and configure [Blackfire](https://blackfire.io) on your Chassis server.
 
 ## Usage
-1. Add this extension to your extensions directory `git clone git@github.com:BoxUK/chassis-blackfire.git extensions/blackfire`
-2. Set your `config.local.yaml` PHP version to 5.6 or higher.
+1. Add this extension to your extensions directory `git clone git@github.com:boxuk/chassis_blackfire.git extensions/chassis_blackfire`
+2. Ensure your `config.local.yaml` PHP version is set to 5.6 or higher.
 3. Ensure you have the following configuration in your `config.local.yaml`
 
 ```yaml
