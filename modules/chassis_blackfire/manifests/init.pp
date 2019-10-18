@@ -26,11 +26,11 @@ class chassis_blackfire (
   # Agent
   if ( !empty($config[disabled_extensions]) and 'chassis/blackfire' in $config[disabled_extensions] ) {
     $package = absent
-    $file = absent
+    $file    = absent
     $service = stopped
   } else {
     $package = latest
-    $file = 'present'
+    $file    = 'present'
     $service = running
   }
 
