@@ -1,4 +1,4 @@
-class blackfire (
+class chassis_blackfire (
 	$config,
 	$php_version  = $config[php],
 	$server_id = $config[blackfire][server_id],
