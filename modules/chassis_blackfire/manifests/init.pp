@@ -41,7 +41,7 @@ class chassis_blackfire (
 
 	file { "/etc/blackfire/agent":
 		ensure  => $file,
-		content => template('blackfire/agent.erb'),
+		content => template('chassis_blackfire/agent.erb'),
 		owner   => 'root',
 		group   => 'root',
 		mode    => '0644',
@@ -59,7 +59,7 @@ class chassis_blackfire (
 
 	file { "/etc/php/${php_version}/fpm/conf.d/blackfire.ini":
 		ensure  => $file,
-		content => template('blackfire/blackfire.ini.erb'),
+		content => template('chassis_blackfire/blackfire.ini.erb'),
 		owner   => 'root',
 		group   => 'root',
 		mode    => '0644',
@@ -68,7 +68,7 @@ class chassis_blackfire (
 
 	file { "/etc/php/${php_version}/cli/conf.d/blackfire.ini":
 		ensure  => $file,
-		content => template('blackfire/blackfire.ini.erb'),
+		content => template('chassis_blackfire/blackfire.ini.erb'),
 		owner   => 'root',
 		group   => 'root',
 		mode    => '0644'
