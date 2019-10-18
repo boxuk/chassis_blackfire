@@ -1,3 +1,4 @@
+# A Chassis extension to install and configure Blackfire
 class chassis_blackfire (
   $config,
   $php_version  = $config[php],
@@ -41,7 +42,7 @@ class chassis_blackfire (
     }
   }
 
-  file { "/etc/blackfire/agent":
+  file { '/etc/blackfire/agent':
     ensure  => $file,
     content => template('chassis_blackfire/agent.erb'),
     owner   => 'root',
