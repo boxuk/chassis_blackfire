@@ -9,7 +9,7 @@ A Chassis extension to install and configure [Blackfire](https://blackfire.io) o
 
 ```yaml
 blackfire:
-    server_id: YOUR_SERER_ID_HERE
+    server_id: YOUR_SERVER_ID_HERE
     server_token: YOUR_SERVER_TOKEN_HERE
 ```
 
